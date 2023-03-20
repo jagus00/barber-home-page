@@ -1,0 +1,121 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 4.5em;
+}
+
+h2 {
+  font-size: 3.25em;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-size: 18px;
+}
+
+span {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+span::before {
+  content: "— ";
+  font-weight: 600;
+  font-size: 25px;
+}
+
+span::after {
+  content: " —";
+  font-weight: 600;
+  font-size: 25px;
+}
+
+.bigBtn, #bookNowBtn {
+  text-decoration: none;
+  color: #fff;
+  background: #d0604c;
+  padding: 15px;
+  text-transform: uppercase;
+  transition: 0.3s;
+  border: none;
+  cursor: pointer;
+}
+.bigBtn:hover, #bookNowBtn:hover {
+  color: red;
+}
+
+header {
+  background: url("https://templatekits.themewarrior.com/firstcut/wp-content/uploads/sites/21/2021/05/hero-home.jpg");
+  background-size: cover;
+  color: #fff;
+}
+header .navMenu {
+  max-width: 1200px;
+  margin: auto;
+}
+header .navMenu .mainMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .navMenu .mainMenu nav ul {
+  margin: 0;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+}
+header .navMenu .mainMenu nav ul li {
+  list-style-type: none;
+  display: inline;
+}
+header .navMenu .mainMenu nav ul li a {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-right: 10px;
+  display: block;
+}
+header .navMenu .mainMenu img {
+  width: 100px;
+}
+
+.heroBanner {
+  max-width: 1200px;
+  margin: auto;
+}
+.heroBanner p {
+  font-size: 18px;
+}
+
+main .aboutUs {
+  max-width: 1400px;
+  margin: auto;
+  display: flex;
+}
+main .aboutUs .aboutUsInfo {
+  padding: 75px;
+  width: 50%;
+  background: red;
+  margin-right: 25px;
+}
+main .aboutUs .aboutUsLogo {
+  background: url("aboutUs.jpg");
+  background-size: cover;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 25px;
+}
+main .aboutUs .aboutUsLogo img {
+  width: 550px;
+  margin: auto;
+  border: 3px solid #fff;
+  padding: 150px;
+}/*# sourceMappingURL=style.css.map */
