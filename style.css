@@ -1,6 +1,15 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&family=Kameron:wght@400;700&display=swap");
 * {
   box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Kameron", serif;
+}
+
+p, span, a, input[type=text], input[type=date] {
+  font-family: "Hind Madurai", sans-serif;
 }
 
 h1 {
@@ -11,111 +20,365 @@ h2 {
   font-size: 3.25em;
 }
 
+a {
+  display: inline-block;
+}
+
 body {
   margin: 0;
   padding: 0;
+  background: #fff;
 }
 
 p {
   font-size: 18px;
 }
 
-span {
+.sub-title {
   font-weight: 600;
   font-size: 20px;
+  color: #d0604c;
 }
 
-span::before {
+.sub-title::before {
   content: "— ";
   font-weight: 600;
   font-size: 25px;
+  color: #d0604c;
 }
 
-span::after {
+.sub-title::after {
   content: " —";
   font-weight: 600;
   font-size: 25px;
+  color: #d0604c;
 }
 
-.bigBtn, #bookNowBtn {
+.big-button, #book-now-button, .shop-button {
   text-decoration: none;
   color: #fff;
   background: #d0604c;
   padding: 15px;
   text-transform: uppercase;
-  transition: 0.3s;
   border: none;
   cursor: pointer;
+  transition: 0.3s;
+  font-weight: 600;
 }
-.bigBtn:hover, #bookNowBtn:hover {
-  color: red;
+.big-button:hover, #book-now-button:hover, .shop-button:hover {
+  background: #fff;
+  color: #d0604c;
+}
+
+.shop-button {
+  padding: 7.5px 10px;
+}
+
+.big-button-transparent {
+  text-decoration: none;
+  color: #d0604c;
+  background: #fff;
+  padding: 12px;
+  text-transform: uppercase;
+  border: 3px solid #d0604c;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 600;
+  margin-top: 50px;
+}
+.big-button-transparent:hover {
+  background: #d0604c;
+  color: #fff;
+}
+
+#book-now-button {
+  margin-top: 15px;
+}
+
+.small-button {
+  text-decoration: none;
+  color: #d0604c;
+  padding-top: 15px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 600;
+}
+.small-button:hover {
+  color: #fff;
 }
 
 header {
-  background: url("https://templatekits.themewarrior.com/firstcut/wp-content/uploads/sites/21/2021/05/hero-home.jpg");
+  background: url("banner.jpg");
   background-size: cover;
   color: #fff;
 }
-header .navMenu {
+header .nav-menu {
   max-width: 1200px;
   margin: auto;
 }
-header .navMenu .mainMenu {
+header .nav-menu .main-menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-header .navMenu .mainMenu nav ul {
+header .nav-menu .main-menu nav ul {
   margin: 0;
   -webkit-margin-before: 0;
           margin-block-start: 0;
 }
-header .navMenu .mainMenu nav ul li {
+header .nav-menu .main-menu nav ul li {
   list-style-type: none;
   display: inline;
 }
-header .navMenu .mainMenu nav ul li a {
+header .nav-menu .main-menu nav ul li a {
   color: #fff;
   text-transform: uppercase;
   text-decoration: none;
   margin-right: 10px;
   display: block;
 }
-header .navMenu .mainMenu img {
-  width: 100px;
+header .nav-menu .main-menu img {
+  width: 300px;
 }
-
-.heroBanner {
+header .hero-banner {
   max-width: 1200px;
   margin: auto;
+  padding: 100px 0 200px 0;
 }
-.heroBanner p {
+header .hero-banner p {
   font-size: 18px;
 }
 
-main .aboutUs {
-  max-width: 1400px;
+main .book-appointment {
+  max-width: 1200px;
+  margin: -100px auto 100px auto;
+  display: flex;
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
+}
+main .book-appointment div {
+  width: 33.3333333333%;
+}
+main .book-appointment .book-appointment-location, main .book-appointment .book-appointment-shop {
+  padding: 250px 50px 50px 50px;
+  color: #fff;
+}
+main .book-appointment .book-appointment-location {
+  background: url("location.jpg");
+  background-size: cover;
+}
+main .book-appointment .book-appointment-shop {
+  background: url("shop.jpg");
+  background-size: cover;
+}
+main .book-appointment .book-appointment-reservation {
+  background: #fff;
+  padding: 50px;
+}
+main .book-appointment .book-appointment-reservation form input {
+  width: 100%;
+}
+main .book-appointment .book-appointment-reservation form input[type=text], main .book-appointment .book-appointment-reservation form input[type=date] {
+  border: none;
+  border-bottom: 1px solid #e0e0e0;
+  height: 50px;
+  font-size: 1.1em;
+  color: #828181;
+  padding: 10px;
+}
+main .book-appointment .book-appointment-reservation form input[type=text]::focus, main .book-appointment .book-appointment-reservation form input[type=date]::focus {
+  border: 1px solid #e0e0e0;
+}
+main .book-appointment h4 {
+  font-size: 1.5em;
+  margin: 0;
+}
+main .about-us {
+  max-width: 1200px;
   margin: auto;
   display: flex;
 }
-main .aboutUs .aboutUsInfo {
+main .about-us .about-us-info {
   padding: 75px;
   width: 50%;
-  background: red;
-  margin-right: 25px;
+  background: #f2f2f2;
 }
-main .aboutUs .aboutUsLogo {
+main .about-us .about-us-logo {
   background: url("aboutUs.jpg");
   background-size: cover;
   width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 25px;
 }
-main .aboutUs .aboutUsLogo img {
-  width: 550px;
+main .about-us .about-us-logo img {
+  width: 450px;
   margin: auto;
   border: 3px solid #fff;
   padding: 150px;
+}
+main .services {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+}
+main .services .row {
+  display: flex;
+  margin: auto;
+  padding-top: 25px;
+}
+main .services .row h3 {
+  font-size: 1.75em;
+}
+main .services .row .service-center {
+  margin: auto 25px;
+}
+main .services .row .service-left, main .services .row .service-center, main .services .row .service-right {
+  width: 50%;
+  padding-bottom: 25px;
+  background-color: white;
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
+  z-index: 555 !important;
+}
+main .services .row img {
+  width: 100%;
+  max-height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .portfolio {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  padding-top: 100px;
+}
+main .portfolio .video-box {
+  width: 50%;
+}
+main .portfolio .news-box {
+  align-items: end;
+  width: 50%;
+  background: url("location.jpg");
+  background-size: cover;
+  color: #fff;
+  margin-left: 50px;
+}
+main .portfolio .news-box div {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
+main .portfolio .news-box div a, main .portfolio .news-box div h3 {
+  display: block;
+}
+main .portfolio .news-box div h3 {
+  font-size: 1.75em;
+  align-self: flex-end;
+}
+main .portfolio .news-box div a {
+  align-self: flex-end;
+}
+main .featured-shop {
+  max-width: 1200px;
+  padding: 75px 0;
+  margin: 100px auto;
+  background: #f2f2f2;
+  text-align: center;
+}
+main .featured-shop .products {
+  display: flex;
+}
+main .featured-shop .products .product-left, main .featured-shop .products .product-center, main .featured-shop .products .product-right {
+  width: 33.3333333333%;
+  background: #fff;
+  padding: 25px;
+  margin: 25px;
+}
+main .featured-shop .products .product-left img, main .featured-shop .products .product-center img, main .featured-shop .products .product-right img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-height: 250px;
+}
+main .featured-shop .products .product-left {
+  margin: auto 25px auto 50px;
+}
+main .featured-shop .products .product-center {
+  margin: auto 25px;
+}
+main .featured-shop .products .product-right {
+  margin: auto 50px auto 25px;
+}
+main .opinions {
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+main .opinions .testimontal {
+  margin-right: 50px;
+  width: 50%;
+}
+main .opinions .clientPhoto {
+  width: 50%;
+  margin-left: 50px;
+}
+main .opinions .clientPhoto img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-height: 375px;
+  width: 100%;
+}
+main .blog-posts {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+main .blog-posts .articles {
+  display: flex;
+}
+main .blog-posts .articles article {
+  width: 33.3333333333%;
+}
+
+footer {
+  background: url("footer.jpg");
+  margin: 0;
+}
+footer .footer-container {
+  max-width: 1200px;
+  display: flex;
+  margin: auto;
+}
+footer .footer-container .info {
+  width: 25%;
+  color: #fff;
+}
+footer .footer-container .info h3 {
+  font-size: 1.5em;
+}
+footer .footer-container .info span {
+  color: #d0604c;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.2em;
+}
+footer .footer-container .info a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+footer .footer-container .info ul {
+  padding: 0;
+  line-height: 2em;
+  font-size: 1.1em;
+  list-style-type: none;
+}
+footer .footer-container .socials {
+  display: flex;
+  align-items: center;
+}
+footer .footer-container .socials i {
+  margin: auto 7.5px;
 }/*# sourceMappingURL=style.css.map */

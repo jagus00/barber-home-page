@@ -1,53 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&family=Kameron:wght@400;700&display=swap')
+
 $yellow: #d0604c
     
 *
     box-sizing: border-box
+
+h1, h2, h3, h4, h5, h6
+    font-family: 'Kameron', serif
+
+p, span, a, input[type=text], input[type=date]
+    font-family: 'Hind Madurai', sans-serif
 
 h1
     font-size: 4.5em
 h2
     font-size: 3.25em
 
+a
+    display: inline-block
+
 body 
     margin: 0
     padding: 0
+    background: #fff
 
 p
     font-size: 18px
 
-span
+.sub-title
     font-weight: 600 
     font-size: 20px
-span::before
+    color: $yellow
+.sub-title::before
     content: "— "
     font-weight: 600
     font-size: 25px
-
-span::after
+    color: $yellow
+.sub-title::after
     content: " —"
     font-weight: 600
     font-size: 25px
+    color: $yellow
 
-.bigBtn, #bookNowBtn
+.big-button, #book-now-button, .shop-button
     text-decoration: none
     color: #fff
     background: $yellow
     padding: 15px
     text-transform: uppercase
-    transition: .3s
     border: none
     cursor: pointer
+    transition: .3s
+    font-weight: 600
     &:hover
-        color: red
+        background: #fff
+        color: $yellow
+.shop-button
+    padding: 7.5px 10px
+.big-button-transparent
+    text-decoration: none
+    color: $yellow
+    background: #fff
+    padding: 12px
+    text-transform: uppercase
+    border: 3px solid $yellow
+    cursor: pointer
+    transition: .3s
+    font-weight: 600
+    margin-top: 50px
+    &:hover
+        background: $yellow
+        color: #fff
+#book-now-button
+    margin-top: 15px
+.small-button
+    text-decoration: none
+    color: $yellow
+    padding-top: 15px
+    text-transform: uppercase
+    border: none
+    cursor: pointer
+    transition: .3s
+    font-weight: 600
+    &:hover
+        color: #fff
 
 header
-    background: url("https://templatekits.themewarrior.com/firstcut/wp-content/uploads/sites/21/2021/05/hero-home.jpg")
+    background: url("banner.jpg")
     background-size: cover
     color: #fff
-    .navMenu
+    .nav-menu
         max-width: 1200px
         margin: auto
-        .mainMenu
+        .main-menu
             display: flex
             justify-content: space-between
             align-items: center
@@ -65,36 +110,194 @@ header
                             margin-right: 10px
                             display: block
             img
-                width: 100px
-
-    
-.heroBanner
-    max-width: 1200px
-    margin: auto
-    p
-        font-size: 18px
+                width: 300px
+    .hero-banner
+        max-width: 1200px
+        margin: auto
+        padding: 100px 0 200px 0
+        p
+            font-size: 18px
 
 main
-    .aboutUs
-        max-width: 1400px
+    .book-appointment
+        max-width: 1200px
+        margin: -100px auto 100px auto
+        display: flex
+        box-shadow: 0px 10px 20px 0px rgba(0,0,0,.2)
+        div
+            width: calc(100%/3)
+        .book-appointment-location, .book-appointment-shop
+            padding: 250px 50px 50px 50px
+            color: #fff
+        .book-appointment-location
+            background: url("location.jpg")
+            background-size: cover
+        .book-appointment-shop
+            background: url("shop.jpg")
+            background-size: cover
+        .book-appointment-reservation
+            background: #fff
+            padding: 50px
+            form
+                input
+                    width: 100%
+                input[type=text], input[type=date]
+                    border: none    
+                    border-bottom: 1px solid #e0e0e0
+                    height: 50px
+                    font-size: 1.1em
+                    color: #828181
+                    padding: 10px
+                    &::focus
+                        border: 1px solid #e0e0e0
+        h4
+            font-size: 1.5em
+            margin: 0
+    .about-us
+        max-width: 1200px
         margin: auto
         display: flex
-        .aboutUsInfo
+        .about-us-info
             padding: 75px
             width: 50%
-            background: red
-            margin-right: 25px
-        .aboutUsLogo
+            background: #f2f2f2
+        .about-us-logo
             background: url("aboutUs.jpg")
             background-size: cover
             width: 50%
             display: flex
             justify-content: center
             align-items: center
-            margin-left: 25px
             img
-                width: 550px
+                width: 450px
                 margin: auto
                 border: 3px solid #fff
                 padding: 150px
+    .services
+        max-width: 1200px
+        margin: auto
+        text-align: center
+        padding-top: 100px
+        .row
+            display: flex
+            margin: auto
+            padding-top: 25px
+            h3
+                    font-size: 1.75em
+            .service-center
+                margin: auto 25px
+            .service-left,.service-center, .service-right
+                width: 50%
+                padding-bottom: 25px
+                background-color: white
+                box-shadow: 0px 10px 20px 0px rgba(0,0,0,.2)
+                z-index: 555 !important
+            img
+                width: 100%
+                max-height: 200px
+                object-fit: cover
+    .portfolio
+        max-width: 1200px
+        margin: auto
+        display: flex
+        padding-top: 100px
+        .video-box
+            width: 50%
+        .news-box
+            align-items: end
+            width: 50%
+            background: url("location.jpg")
+            background-size: cover
+            color: #fff
+            margin-left: 50px
+            div
+                display: flex
+                flex-wrap: wrap
+                align-content: center
+                a, h3
+                    display: block
+                h3
+                    font-size: 1.75em
+                    align-self: flex-end
+                a
+                    align-self: flex-end
+    .featured-shop
+        max-width: 1200px
+        padding: 75px 0
+        margin: 100px auto
+        background: #f2f2f2
+        text-align: center
+        .products
+            display: flex
+            .product-left, .product-center, .product-right
+                width: calc(100%/3)
+                background: #fff
+                padding: 25px
+                margin: 25px
+                img
+                    object-fit: cover
+                    max-height: 250px
+            .product-left
+                margin: auto 25px auto 50px
+            .product-center
+                margin: auto 25px
+            .product-right
+                margin: auto 50px auto 25px
+    .opinions
+         max-width: 1200px
+         display: flex
+         align-items: center
+         margin: auto
+         .testimontal
+            margin-right: 50px
+            width: 50%
+         .clientPhoto
+            width: 50%
+            margin-left: 50px
+            img 
+                object-fit: cover
+                max-height: 375px
+                width: 100%
+    .blog-posts
+        max-width: 1200px
+        margin: auto
+        text-align: center
+        .articles
+            display: flex
+            article
+                width: calc(100%/3)
+
+footer
+    background: url("footer.jpg")
+    margin: 0
+    .footer-container
+        max-width: 1200px
+        display: flex
+        margin: auto
+        .info
+            width: 25%
+            color: #fff
+            h3
+                font-size: 1.5em
+            span
+                color: $yellow
+                text-transform: uppercase
+                font-weight: 600
+                font-size: 1.2em
+            a
+                color: #fff
+                text-decoration: none
+                font-size: 1.1em
+            ul
+                padding: 0
+                line-height: 2em
+                font-size: 1.1em
+                list-style-type: none
+        .socials
+            display: flex
+            align-items: center
+            i
+                margin: auto 7.5px
+                
+                    
 
