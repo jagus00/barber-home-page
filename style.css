@@ -14,10 +14,12 @@ p, span, a, input[type=text], input[type=date] {
 
 h1 {
   font-size: 4.5em;
+  margin: 15px auto;
 }
 
 h2 {
   font-size: 3.25em;
+  margin: 15px auto;
 }
 
 a {
@@ -54,7 +56,7 @@ p {
   color: #d0604c;
 }
 
-.big-button, #book-now-button, .shop-button {
+.big-button, #book-now-button, .shop-button, #subscribe-button {
   text-decoration: none;
   color: #fff;
   background: #d0604c;
@@ -65,7 +67,7 @@ p {
   transition: 0.3s;
   font-weight: 600;
 }
-.big-button:hover, #book-now-button:hover, .shop-button:hover {
+.big-button:hover, #book-now-button:hover, .shop-button:hover, #subscribe-button:hover {
   background: #fff;
   color: #d0604c;
 }
@@ -91,7 +93,7 @@ p {
   color: #fff;
 }
 
-#book-now-button {
+#book-now-button, #subscribe-button {
   margin-top: 15px;
 }
 
@@ -107,6 +109,10 @@ p {
 }
 .small-button:hover {
   color: #fff;
+}
+
+#subscribe-button {
+  font-size: 0.9em;
 }
 
 header {
@@ -130,14 +136,17 @@ header .nav-menu .main-menu nav ul {
 }
 header .nav-menu .main-menu nav ul li {
   list-style-type: none;
-  display: inline;
+  display: inline-block;
 }
 header .nav-menu .main-menu nav ul li a {
   color: #fff;
   text-transform: uppercase;
   text-decoration: none;
   margin-right: 10px;
-  display: block;
+  transition: 0.3s;
+}
+header .nav-menu .main-menu nav ul li a:hover {
+  color: #d0604c;
 }
 header .nav-menu .main-menu img {
   width: 300px;
@@ -147,10 +156,18 @@ header .hero-banner {
   margin: auto;
   padding: 100px 0 200px 0;
 }
-header .hero-banner p {
+header .hero-banner div {
+  width: 50%;
+}
+header .hero-banner div p {
   font-size: 18px;
+  margin-bottom: 25px;
 }
 
+main {
+  max-width: 1200px;
+  margin: auto;
+}
 main .book-appointment {
   max-width: 1200px;
   margin: -100px auto 100px auto;
@@ -219,8 +236,6 @@ main .about-us .about-us-logo img {
   padding: 150px;
 }
 main .services {
-  max-width: 1200px;
-  margin: auto;
   text-align: center;
   padding-top: 100px;
 }
@@ -239,7 +254,7 @@ main .services .row .service-left, main .services .row .service-center, main .se
   width: 50%;
   padding-bottom: 25px;
   background-color: white;
-  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
   z-index: 555 !important;
 }
 main .services .row img {
@@ -249,8 +264,6 @@ main .services .row img {
      object-fit: cover;
 }
 main .portfolio {
-  max-width: 1200px;
-  margin: auto;
   display: flex;
   padding-top: 100px;
 }
@@ -282,7 +295,7 @@ main .portfolio .news-box div a {
 }
 main .featured-shop {
   max-width: 1200px;
-  padding: 75px 0;
+  padding: 50px 0;
   margin: 100px auto;
   background: #f2f2f2;
   text-align: center;
@@ -327,24 +340,84 @@ main .opinions .clientPhoto {
 main .opinions .clientPhoto img {
   -o-object-fit: cover;
      object-fit: cover;
-  max-height: 375px;
+  height: 600px;
   width: 100%;
 }
 main .blog-posts {
-  max-width: 1200px;
-  margin: auto;
   text-align: center;
+  padding: 50px;
+  margin: 100px auto 150px auto;
+  background: #f2f2f2;
 }
 main .blog-posts .articles {
   display: flex;
 }
 main .blog-posts .articles article {
   width: 33.3333333333%;
+  padding-bottom: 25px;
+  background: #fff;
+}
+main .blog-posts .articles article img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-height: 200px;
+  width: 100%;
+}
+main .blog-posts .articles .first-article {
+  margin-right: 25px;
+}
+main .blog-posts .articles .second-article {
+  margin: auto 25px;
+}
+main .blog-posts .articles .third-article {
+  margin-left: 25px;
+}
+main .newsletter {
+  margin: auto auto -200px auto;
+  background: #fff;
+  z-index: 12222;
+  display: flex;
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
+  padding: 25px 50px;
+  position: relative;
+}
+main .newsletter .join-newsletter {
+  width: 70%;
+}
+main .newsletter .join-newsletter p {
+  line-height: 1.5em;
+}
+main .newsletter .sign-up-newsletter {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-left: 1px solid #f2f2f2;
+}
+main .newsletter .sign-up-newsletter form input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #e0e0e0;
+  height: 50px;
+  font-size: 1.1em;
+  color: #828181;
+  padding: 10px;
+}
+main .newsletter .sign-up-newsletter form input::focus {
+  border: 1px solid #e0e0e0;
 }
 
 footer {
   background: url("footer.jpg");
-  margin: 0;
+  background-size: cover;
+  padding-top: 250px;
+}
+footer img {
+  display: block;
+  max-height: 40px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin: 50px auto;
 }
 footer .footer-container {
   max-width: 1200px;
@@ -352,7 +425,7 @@ footer .footer-container {
   margin: auto;
 }
 footer .footer-container .info {
-  width: 25%;
+  width: 28.3333333333%;
   color: #fff;
 }
 footer .footer-container .info h3 {
@@ -368,6 +441,10 @@ footer .footer-container .info a {
   color: #fff;
   text-decoration: none;
   font-size: 1.1em;
+  transition: 0.3s;
+}
+footer .footer-container .info a:hover {
+  color: #d0604c;
 }
 footer .footer-container .info ul {
   padding: 0;
